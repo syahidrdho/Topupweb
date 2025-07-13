@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layanan TopUp Game Promo</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- CSS Kustom -->
+  <link rel="stylesheet" href="css/formmlbb.css"/>
+</head>
+<body class="bg-light">
+
+  <!-- Banner -->
+  <div class="promo-banner position-relative text-white mb-4 animate__animated animate__fadeInDown">
+    <img src="images/mlbb-banner.jpg" alt="Banner Promo Mobile Legends" class="img-fluid w-100 banner-img">
+  </div>
+
+  <!-- Konten -->
+  <div class="container mt-5">
+    <div class="row">
+
+      <!-- Sidebar -->
+      <div class="col-lg-3 mb-4">
+        <div class="sidebar-purple text-white text-center p-3 rounded shadow-sm animate__animated animate__fadeInLeft">
+          <img src="images/mlbb.jpg" alt="Mobile Legends Logo" class="img-fluid mb-3" style="max-width: 100px;">
+          <h5 class="mb-2">Mobile Legends</h5>
+          <ul class="list-unstyled small mt-3">
+            <li>Dapatkan Cashback</li>
+            <li>Bonus Kuota 3GB</li>
+            <li>Bantuan & FAQ</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="col-lg-6 mb-4">
+        <div class="form-topup-box bg-white text-dark p-4 rounded shadow-sm animate__animated animate__fadeInUp">
+          <h5 class="mb-3">1. Masukkan Game ID Anda</h5>
+          <div class="row g-2 mb-3">
+            <div class="col-md-8">
+              <input type="text" class="form-control" id="input-id" placeholder="Masukkan ID Anda" required />
+            </div>
+            <div class="col-md-4">
+              <input type="text" class="form-control" id="input-zone" placeholder="Zone ID" required />
+            </div>
+          </div>
+
+          <h5 class="mb-3">2. Pilih Jumlah Diamond</h5>
+          <select class="form-select mb-3" id="select-diamond" required>
+            <option selected disabled>-- Pilih Diamond --</option>
+            <option value="86|15000">86 Diamond – Rp15.000</option>
+            <option value="172|30000">172 Diamond – Rp30.000</option>
+            <option value="257|45000">257 Diamond – Rp45.000</option>
+            <option value="706|100000">706 Diamond – Rp100.000</option>
+          </select>
+
+          <h5 class="mb-3">3. Pilih Metode Pembayaran</h5>
+          <div class="row g-2 mb-3" id="payment-buttons">
+            <div class="col-6 col-md-4"><button type="button" class="btn btn-outline-dark w-100">QRIS</button></div>
+            <div class="col-6 col-md-4"><button type="button" class="btn btn-outline-dark w-100">Dana</button></div>
+            <div class="col-6 col-md-4"><button type="button" class="btn btn-outline-dark w-100">OVO</button></div>
+            <div class="col-6 col-md-4"><button type="button" class="btn btn-outline-dark w-100">GoPay</button></div>
+            <div class="col-6 col-md-4"><button type="button" class="btn btn-outline-dark w-100">ShopeePay</button></div>
+            <div class="col-6 col-md-4"><button type="button" class="btn btn-outline-dark w-100">Transfer Bank</button></div>
+          </div>
+
+          <h5 class="mb-3">4. Masukkan Nomor HP</h5>
+          <input type="text" class="form-control mb-3" id="input-hp" placeholder="Contoh: 08XXXXXXXXXX" required />
+
+          <h5 class="mb-3">5. Masukkan Email (Opsional)</h5>
+          <input type="email" class="form-control mb-3" placeholder="Email untuk bukti transaksi" />
+
+          <!-- Tombol Konfirmasi -->
+          <div class="d-grid mt-3">
+            <button class="btn btn-primary" onclick="updateRingkasan()">Konfirmasi</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ringkasan -->
+      <div class="col-lg-3 mb-4">
+        <div class="ringkasan-box bg-purple text-white p-3 rounded shadow-sm h-100 animate__animated animate__fadeInRight">
+          <h6 class="mb-3">Ringkasan Transaksi</h6>
+          <p class="small mb-1">Diamond: <strong id="summary-diamond">-</strong></p>
+          <p class="small mb-1">Pembayaran: <strong id="summary-payment">-</strong></p>
+          <p class="small mb-1">Nomor HP: <span id="summary-hp">-</span></p>
+          <h5 class="my-3">Total: <span id="summary-total">-</span></h5>
+          <button class="btn btn-outline-light w-100">Beli Sekarang</button>
+         <p class="small text-white-50 mt-2">*Harga sudah termasuk PPN</p>
+          <div class="d-flex flex-wrap gap-2 mt-2">
+          <img src="images/metode.png" alt="QRIS" style="height:250px;">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- File JS Kustom -->
+  <script src="js/form-mlbb.js"></script>
+</body>
+</html>
